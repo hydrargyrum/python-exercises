@@ -6,8 +6,29 @@ import pytest
 # Exercice: container
 
 class Range:
-    # TODO
-    ...
+    def __init__(self, start, stop):
+        self.start = start
+        self.stop = stop
+
+    def __iter__(self):
+        n = self.start
+        while n < self.stop:
+            yield n
+            n += 1
+
+    def __len__(self):
+        return self.stop - self.start
+
+    def __getitem__(self, n):
+        if n >= len(self) or n < -len(self):
+            raise IndexError()
+        elif n >= 0:
+            return self.start + n
+        else:
+            return self.stop + n
+
+    def __contains__(self, n):
+        return self.start <= n < self.stop
 
 
 # test
