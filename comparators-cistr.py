@@ -33,11 +33,11 @@ def test_CaseInsensitiveStr_cmp():
     assert ufoo < 'fuu'
     assert ufoo <= 'fuu'
 
-    assert sorted(['FUU', 'Foo', 'FOO', 'faa']) == ['FUU', 'FOO', 'Foo', 'faa']
+    assert sorted(['FUU', 'Foo', 'FOO', 'faa']) == ['FOO', 'FUU', 'Foo', 'faa']
     assert [
         str(cs)
         for cs in sorted([cistr('FUU'), cistr('Foo'), cistr('FOO'), cistr('faa')])
-    ] == ['faa', 'Foo', 'FOO', 'fuu']
+    ] == ['faa', 'Foo', 'FOO', 'FUU']
 
 
 def test_CaseInsensitiveStr_set():
