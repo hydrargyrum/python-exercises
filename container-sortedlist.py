@@ -7,8 +7,10 @@ import pytest
 
 
 class SortedList(...):
-    # TODO
     ...
+
+    def add(self, n):
+        ...
 
 
 def test_SortedList():

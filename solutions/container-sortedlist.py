@@ -7,6 +7,8 @@ import pytest
 
 
 class SortedList(collections.abc.Sequence):
+    # Subclassing `list` is possible but discouraged because it would still expose
+    # the `append` and `insert` methods, which can make the list unsorted.
     def __init__(self, iterable=()):
         self.data = sorted(iterable)
 
