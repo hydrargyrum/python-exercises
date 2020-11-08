@@ -7,3 +7,8 @@ If the parameter is even, the decorated function is executed and its result
 returned.
 If the param is odd, the decorated function should not be executed and a
 `ValueError` should be raised.
+
+## Hint
+
+A decorator is a function that takes a function X as parameter and returns a
+new function Y wrapping X.
