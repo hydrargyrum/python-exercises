@@ -28,3 +28,6 @@ Context managers:
 
 Operators:
 1. `comparators-cistr.py`
+
+Weak references:
+1. `weakrefs.py`
