@@ -1,0 +1,6 @@
+test:
+    image: "python:3"
+    stage: "test"
+    script:
+        - "pip install pytest"
+        - "pytest ./solutions/*.py"
