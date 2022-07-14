@@ -1,4 +1,4 @@
-#!/usr/bin/env pytest-3
+#!/usr/bin/env pytest
 
 from weakref import ref
 from argparse import Namespace as N
